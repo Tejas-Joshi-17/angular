@@ -1,0 +1,47 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Angular Installation :- 
+
+- a) Install node
+- b) Install npm
+- c) Install Angular CLI :- npm install -g @angular/cli 
+
+Check Installation :- 
+
+- a) Check for Node         :- node --version
+- b) Check for npm          :- npm --version
+- c) Check for angular cli  :- ng version
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+File & Folder Structure :- 
+
+1) Package.json                :-  Contains list of dependencies
+2) node_modules folder         :-  Contains all dependent modules 
+3) src folder                  :-  Main Folder
+   |
+   |------> app folder            :- Contains components
+   |------> assets folder         :- Use to store images, git files, etc 
+   |------> index.html            :- File render by Angular 
+   |------> style.css             :- Contains global css
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Important Commands :- 
+
+1)  Create Angular Project        :- ng new <Project_Name>
+2)  Run Angular Project           :- ng serve
+3)  Get Help                      :- ng help 
+4)  Generate Component            :- ng generate component <Component_Name>
+5)  Generate Module               :- ng generate module <Module_Name>
+6)  Generate Component in Module  :- ng generate component <Module_Name>/<Component_Name>
+7)  Generate Class                :- ng generate class <Class_Name>
+8)  Generate Interface            :- ng generate interface <Interface_Name>
+
+9)  Generate Component with inline style                     :- ng generate component --inline-style
+9)  Generate Component with inline template/html             :- ng generate component --inline-template
+9)  Generate Component with inline template & inline style   :- ng generate component --inline-style --inline-template
+
+10) Create Angular-in-memory-web-api            :- npm install angular-in-memory-web-api@0.16.0
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
