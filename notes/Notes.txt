@@ -12,6 +12,12 @@ Check Installation :-
 - b) Check for npm          :- npm --version
 - c) Check for angular cli  :- ng version
 
+Angular Uninstallation :-
+
+- a) uninstall angular :-   npm uninstall -g @angular/cli
+- b) Install specfic angular :-    npm install -g @angular/cli@17
+- c) Install Latest Angular :-    npm install -g @angular/cli
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 File & Folder Structure :- 
