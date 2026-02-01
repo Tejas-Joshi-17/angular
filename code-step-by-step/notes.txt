@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is Angular :- 
+
+  1) Javascript framework for web development
+  2) Single Page Application (No Refersh on click)
+  3) Developed by Google
+
+Why Angular :- 
+
+  1) Fast Loading   
+  2) Fast development
+  3) Angular Provides alots of features
+    	- Validation Library
+    	- Routing
+    	- Component bases structure
+  4) Large community    
+    
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

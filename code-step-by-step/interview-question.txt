@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1) Can we use var/let/const in Component ?
+Answer :-   
+
+    In TypeScript/JavaScript classes, you cannot use const (or let) directly inside a class body.
+
+    A class can only contain :- 
+        - a) properties (fields)
+        - b) methods
+        - c) getters/setters
+
+    export class AppComponent {
+        title : string = 'Tejas Joshi';
+        const temp : string = `sarvatra technology`;     <--- Invalid
+
+        testFunction() : void {
+            const t:string = `sarvatra technology`;      <--- Valid
+        }
+
+        function testFunc() : void {                     <--- Invalid
+            let name :string = `Tejas Joshi`;
+        }
+    }
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
