@@ -1,0 +1,25 @@
+---------------------------------------------------------------------------------------------------------------
+
+How to Add Bootstrap in Angular-19 :-  
+
+1) npm install bootstrap @popperjs/core
+2) Open angular.json and update the styles array :- 
+    "styles": [
+        "node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "src/styles.css"
+    ]
+3) Open angular.json and update the scripts array :-
+    "scripts": [
+        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ]
+4) Restart dev server :-    npm run start / ng serve 
+
+---------------------------------------------------------------------------------------------------------------
+
+How to Add Ng-Bootstrap in Angular-19 ;-
+
+1) ng add @ng-bootstrap/ng-bootstrap
+2) Restart dev server :-    npm run start / ng serve
+
+
+---------------------------------------------------------------------------------------------------------------

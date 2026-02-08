@@ -14,9 +14,9 @@ Check Installation :-
 
 Angular Uninstallation :-
 
-- a) uninstall angular :-   npm uninstall -g @angular/cli
+- a) uninstall angular :-          npm uninstall -g @angular/cli
 - b) Install specfic angular :-    npm install -g @angular/cli@17
-- c) Install Latest Angular :-    npm install -g @angular/cli
+- c) Install Latest Angular :-     npm install -g @angular/cli
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
