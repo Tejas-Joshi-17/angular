@@ -39,15 +39,21 @@ Important Commands :-
 2)  Run Angular Project           :- ng serve
 3)  Get Help                      :- ng help 
 4)  Generate Component            :- ng generate component <Component_Name>
+4)  Generate Component            :- ng generate component <folder-name>/<Component_Name>
 5)  Generate Module               :- ng generate module <Module_Name>
 6)  Generate Component in Module  :- ng generate component <Module_Name>/<Component_Name>
 7)  Generate Class                :- ng generate class <Class_Name>
 8)  Generate Interface            :- ng generate interface <Interface_Name>
+9)  Generate Directive            :- ng generate directive <directive-name>
 
-9)  Generate Component with inline style                     :- ng generate component --inline-style
-9)  Generate Component with inline template/html             :- ng generate component --inline-template
-9)  Generate Component with inline template & inline style   :- ng generate component --inline-style --inline-template
+10)  Generate Component with inline style                     :- ng generate component --inline-style
+10)  Generate Component with inline template/html             :- ng generate component --inline-template
+10)  Generate Component with inline template & inline style   :- ng generate component --inline-style --inline-template
 
-10) Create Angular-in-memory-web-api            :- npm install angular-in-memory-web-api@0.16.0
+11)  Create Angular-in-memory-web-api            :- npm install angular-in-memory-web-api@0.16.0
+
+12) Install Cookies   :-      npm install ngx-cookie-service --save
+13) Generate enviroment :-    ng g environments
+13) Generate guard :-         ng g guard <guardName>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------

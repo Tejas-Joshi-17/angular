@@ -1,0 +1,27 @@
+<div>Login In</div>
+<div style="text-align: center;">
+    <table>
+        <tbody>
+            <tr>
+                <td>Student Name</td>
+                <td>
+                    <input type="text" #stdName>
+                </td>
+            </tr>
+            <tr>
+                <td>Student Password</td>
+                <td>
+                    <input type="password" #stdPassword>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" (click)="this.login(stdName.value, stdPassword.value)">Login In</button>
+                </td>
+                <td>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
