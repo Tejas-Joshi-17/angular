@@ -1,0 +1,142 @@
+------------------------------------------------------------------------------------------------------------------
+
+Directives in Angular :- 
+
+    1) Directives are special instructions in Angular that change the behaviour, appearance, 
+       or structure of DOM elements
+    2) Directives tell Angular how an element should behave or look
+
+Types of Directives :-  
+
+    1) Component Directives
+    2) Structural Directives
+    3) Attribute Directives 
+
+------------------------------------------------------------------------------------------------------------------
+
+
+1) Component Directives :- 
+
+    - A Component Directive (commonly called just a Component) is a special type of directive in Angular that :- 
+        a) Controls a section of the UI
+        b) Has its own HTML template
+        c) Has styles (css)
+        d) Contains Typescript logic
+    Note :-  Every Component is a directive, but not every directive is a component
+
+    Structure :-        @Component({
+                            selector: 'app-root',
+                            imports: [],
+                            templateUrl: './app.component.html',
+                            styleUrl: './app.component.css'
+                        })
+                        export class AppComponent {
+                            public userName : string = `Tejas Joshi`;
+                        }
+
+    Usage :-    <app-root></app-root>
+
+    Key Parts of a Component Directive :- 
+        1) selector :-  Custom HTML tag
+        2) template / templateUrl :-  UI Structure
+        3) styles / styleUrls  :-   Styling
+        4) class  :-   Business Logic 
+
+    Why Component is a Directive :- 
+        1) It extends directive behaviour
+        2) It adds a template
+        3) Angular internally treats components as directives with views
+
+    Component VS Other Directives :- 
+        Feature         Component         Structural Directive        Attribute Directive
+        Template        Yes               No                          No
+        Css             Yes               No                          No
+        DOM Control     Section-based     Add / Remove                Element-level
+
+    Real-World Example :- 
+        Think of components as LEGO blocks
+            1) HeaderComponent
+            2) FooterComponent
+            3) LoginComponent
+        Each blocks :- 
+            1) Reusabled
+            2) Independent
+            3) Easy to maintain
+
+    Summary :- 
+        A Component Directive is a directive with a template that controls a part of the UI
+        and encapsulates logic, view, and styles.
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+2) Structural Directives :- 
+
+    1) Structural Directives are directives that change the DOM structure by adding, removing,
+       or replacing elements.
+    2) They control layout & flow of the UI
+
+    Syntax :-  
+
+        1) @if :-
+            @if (isLoggedIn) {
+              <p>Welcome User</p>
+            }
+
+        2) @for :- 
+            @for (user of users; track user.id) {
+                <li>{{ user.name }}</li>
+            } 
+
+        3) @switch :- 
+            @switch (role) {
+                @case ('admin') { <p>Admin</p> }
+                @case ('user') { <p>User</p> }
+                @default { <p>Guest</p> }
+            }
+
+    Key Points :- 
+        Feature                            Structural Directive
+        Change DOM structure               Yes 
+        Add / remove elements              Yes 
+        Has template                       No 
+        Angular 19 preferred syntax        @if, @for, @switch
+
+    Old Syntax VS New Syntax :- 
+        Old Syntax                   Angular 19
+        *ngIf                        @if
+        *ngFor                       @for 
+        *ngSwitch                    @switch
+
+    Summary :- 
+        Structural directives control the structure of the DOM by adding or removing elements,
+        using @if, @for, and @switch in Angular 19
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+3) Attribute Directives :- 
+
+    1) Attribute Directive change the appearance or behaviour of an existing HTML element 
+       without changing the DOM structure
+    2) They modify elements, they don't add/remove them
+
+    Common Attribute Directive :- 
+        1) ngClass
+        2) nsStyle
+        3) ngModel
+
+    Key Features :- 
+        Feature                             Attribute Directive
+        Change DOM structure                No
+        Change style / behaviour            Yes
+        Works on existing element           Yes
+
+    Summary :- 
+        Attribute Directive change the appearance or behaviour of an element without
+        modifying the DOM structure
+
+
+------------------------------------------------------------------------------------------------------------------

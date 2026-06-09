@@ -1,0 +1,105 @@
+<h2>Registration Form</h2>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="userName">Enter username :- </label>
+    <input type="text" formControlName="name" id="userName" />
+    @if ( this.myForm.controls["name"].touched && this.myForm.controls["name"].invalid) {
+      @if (this.myForm.controls["name"].errors?.["required"]) {
+        <small style="color: red">Name is required</small>
+      } @else if (this.myForm.controls["name"].errors?.["minlength"]) {
+        <small style="color: red">Minimum 3 characters</small>
+      } @else if (this.myForm.controls["name"].errors?.["maxlength"]) {
+        <small style="color: red">Max 10 characters</small>
+      }
+    } @else if (this.myForm.controls["name"].valid) {
+      <small style="color: green"><b>All good !!!</b></small>
+    }
+  </div>
+
+  <div>
+    <label for="userAge">Enter Age :- </label>
+    <input type="number" id="userAge" formControlName="age" />
+    @if ( this.myForm.controls["age"].touched && this.myForm.controls["age"].invalid) {
+      @if (this.myForm.controls["age"].errors?.["required"]) {
+        <small>Age is required</small>
+      } @else if (this.myForm.controls["age"].errors?.["min"]) {
+        <small style="color: red">Age must be greater than 0</small>
+      } @else if (this.myForm.controls["age"].errors?.["max"]) {
+        <small style="color: red">Age must be less than 100</small>
+      }
+    } @else if (this.myForm.controls["age"].valid) {
+      <small style="color: green"><b>All good !!!</b></small>
+    }
+  </div>
+
+  <div formArrayName="skills">
+    <label for="userSkills">Enter Skills :- </label>
+    <input type="text" id="userSkills" #skillValue>
+    <button type="button" (click)="addSkill(skillValue.value)">Add Skill</button> 
+    <div>
+    @for (item of skills.controls; track $index) {
+      <span>{{skills.at($index).value}}</span>
+    } @empty {
+      <div>No Skills added yet</div>
+    }
+    @if (this.myForm.controls["skills"].touched && skills.controls.length === 0) {
+      <small style="color: red">Max 10 characters</small>
+    }
+    </div>
+  </div>
+
+  <div>
+    <label for="userPassword">Enter Password :- </label>
+    <input type="password" id="userPassword" formControlName="password">
+    @if (this.myForm.controls['password'].touched && this.myForm.controls['password'].invalid) {
+      @if (this.myForm.controls["password"].errors?.["required"]) {
+        <small style="color: red">Password must be filled</small>
+      } @else if (this.myForm.controls["password"].errors?.["minlength"]) {
+        <small style="color: red">Password must be greater than 6</small>
+      }
+    } @else if (this.myForm.controls['password'].valid) {
+      <small style="color: green"><b>All good !!!</b></small>
+    }
+  </div>
+
+  <div>
+    <label for="usercondirmPassword">Enter Password :- </label>
+    <input type="password" id="usercondirmPassword" formControlName="confirmPassword">
+    @if (this.myForm.controls['confirmPassword'].touched && this.myForm.controls['confirmPassword'].invalid) {
+      @if (this.myForm.controls["confirmPassword"].errors?.["required"]) {
+        <small style="color: red">confirmPassword must be filled</small>
+      }
+    } @else if (this.myForm.controls['confirmPassword'].valid) {
+      <small style="color: green"><b>All good !!!</b></small>
+    }
+  </div>
+
+  <div>
+    @if (
+      myForm.get('confirmPassword')?.touched &&
+      myForm.hasError('passwordMismatch')
+    ) {
+      <small style="color: red">Passwords do not match</small>
+    }
+  </div>
+
+  <div>
+    <label for="userEmail">Please Enter Email :- </label>
+    <input type="email" id="userEmail" formControlName="email">
+    @if (this.myForm.controls['email'].touched) {
+      @if (this.myForm.controls['email'].errors?.['emailExists']) {
+        <small style="color: red">Email already exists</small>
+      } @else if (this.myForm.controls['email'].pending) {
+        <small style="color: red">Checking Email</small>
+      } @else if (this.myForm.controls['email'].errors?.['email']) {
+        <small style="color: red">Please enter valid email</small>
+      } 
+      @else if (this.myForm.controls['email'].valid) {
+        <small style="color: green"><b>All good !!!</b></small>
+      }
+    }
+  </div>
+
+  <button type="submit">Submit</button>
+</form>

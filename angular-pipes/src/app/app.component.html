@@ -1,0 +1,19 @@
+<h1>Angular Pipies</h1>
+<div>{{this.companyName | uppercase}}</div>
+<div>{{this.companyName | lowercase}}</div>
+<div>{{this.companyName | titlecase}}</div>
+<div>{{this.greetMsg}}</div>
+<div>{{this.greetMsg | slice : 1}}</div>
+<div>{{this.greetMsg | slice : 8}}</div>
+<div>{{this.greetMsg | slice : 8:13}}</div>
+<div>{{this.price}}</div>
+<div>{{this.price | currency}}</div>
+<div>{{this.price | currency : 'INR'}}</div>
+<div>{{this.studentData}}</div>
+<div>{{this.studentData | json}}</div>
+<div>{{this.greetMsg | reverseSentence : 'Tejas' : 'Joshi'}}</div>
+
+<div>{{this.title }}</div>
+
+<button (click)="this.checkIsAuthenticated()">Check User</button>
+<div>{{this.userName}}</div>

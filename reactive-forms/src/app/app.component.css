@@ -1,0 +1,13 @@
+div {
+    margin: 5px;
+}
+
+input {
+    margin: 3px;
+    padding: 5px;
+}
+
+label {
+    font-size: 18px;
+    /* display: block; */
+}
